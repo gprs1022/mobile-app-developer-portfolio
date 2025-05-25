@@ -14,6 +14,7 @@ import { ArrowUp } from 'lucide-react';
 import profile from '../public/photo.jpg';
 import { Github, Linkedin, Twitter, Instagram, Youtube, Mail, Globe } from 'lucide-react';
 
+
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
