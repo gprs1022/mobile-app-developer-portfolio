@@ -22,13 +22,13 @@ export const Footer = () => {
           </div>
           
           <div className="flex gap-6 mb-6 md:mb-0">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://github.com/gprs1022" className="text-gray-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/gprspradeep/" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://x.com/gprspradeep" className="text-gray-400 hover:text-white transition-colors">
               <Twitter size={20} />
             </a>
           </div>

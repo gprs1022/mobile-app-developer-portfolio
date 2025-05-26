@@ -4,6 +4,8 @@ import sprintHacks from '../../public/sprinthacks.jpg';
 import robocup from '../../public/robocup.jpeg';
 import redhat from '../../public/redhat.jpeg';
 import appdev from '../../public/30daysapp.jpg';
+import adsc from '../../public/adsc.png';
+import hack from '../../public/hack.png';
 
 export const Achievements = () => {
   const [achievementIndex, setAchievementIndex] = useState(0);
@@ -22,7 +24,7 @@ export const Achievements = () => {
   const achievements = [
     {
       title: "Sprint Hacks Winner 2023",
-      description: "Received for exceptional app quality and innovation in the productivity category",
+      description: "Sprint Hacks organized by DSC KIET group in KIET Group of Institutions. Ghaziabad, Delhi NCR.🏆👨‍💻 Our project 𝐌𝐞𝐝𝐢𝐬𝐭𝐨𝐩 - 𝐎𝐧𝐞 𝐒𝐭𝐨𝐩 𝐅𝐨𝐫 𝐀𝐥𝐥 𝐌𝐞𝐝𝐢𝐍𝐞𝐞𝐝𝐬 seized the First Place 🏅 award with 30K price money and a big bonus Gift Hamper by @DevTown and T-shirt 👕 by Programming Pathshala",
       year: "2023",
       image: sprintHacks
     },
@@ -36,17 +38,23 @@ export const Achievements = () => {
       title: "Hack The Space",
       description: "Participated in Hack The Space 2023 in Chattisgarh, India",
       year: "2023",
-      image: appdev,
+      image: hack,
+    },
+    {
+      title: "AKS Developer Student Club 2023 @ADSC Lead",
+      description: "Built a Student Community and built a platform for students to learn, collaborate, and showcase their projects",
+      year: "2023",
+      image: adsc,
     },
     {
       title: "Rescue Maze Winner 2020",
-      description: "Achieved over one million downloads across published applications",
+      description: "State Level winner 🏆 in Mp among 75 teams At jabalpur.National level fourth place Award at Bangaluru.That event organised by @Indian Robo Cup junior",
       year: "2020",
       image: robocup,
     },
     {
       title: "Redhat Student Brand Ambassador 2022",
-      description: "Featured contributor in Flutter dev community for innovative UI patterns",
+      description: "Conducted 10+ technical workshops on Basics of Linux, Managing Network Security, Configuring and Securing SSH, Ansible, Devops, kubernetes ,Docker, AWS,Python and Containers.- Spreading awareness about programs and certifications provided by Red Hat",
       year: "2022",
       image: redhat,
     }

@@ -19,29 +19,29 @@ export const OngoingProjects = () => {
 
   const projects = [
     {
-      name: 'LiveLoop',
-      description: 'Real-time collaboration platform for musicians',
+      name: 'Mobimist',
+      description: 'Real-time collaboration platform for Repair and Maintenance',
       stacks: ['android', 'ios', 'flutter'],
       status: 'API Connected',
       statusColor: 'bg-blue-100 text-blue-700'
     },
     {
-      name: 'Technopedia Rally System',
-      description: 'Internal tracking system for sales teams',
+      name: 'Couger Motorsport',
+      description: 'Mobile application for motorsports events',
       stacks: ['flutter'],
       status: 'In UI Design',
       statusColor: 'bg-purple-100 text-purple-700'
     },
     {
-      name: 'EcoTracker',
-      description: 'Carbon footprint calculator and suggestions app',
+      name: 'Pharmapedia',
+      description: 'Pharmecial information platform for pharmecy students',
       stacks: ['android', 'flutter'],
       status: 'In Development',
       statusColor: 'bg-green-100 text-green-700'
     },
     {
-      name: 'MedConnect',
-      description: 'Telemedicine platform for remote consultations',
+      name: 'Career Charm',
+      description: 'Edtech Platform for students to find job opportunities',
       stacks: ['ios', 'flutter'],
       status: 'Testing Phase',
       statusColor: 'bg-yellow-100 text-yellow-700'
@@ -53,7 +53,7 @@ export const OngoingProjects = () => {
       case 'android':
         return (
           <div className="w-8 h-8 rounded-full bg-[#3DDC84]/10 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" className="w-5 h-5" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1031px-Android_logo_2019_%28stacked%29.svg.png?20210331145341" alt="Android" className="w-5 h-5" />
           </div>
         );
       case 'ios':

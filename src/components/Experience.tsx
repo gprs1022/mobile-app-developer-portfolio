@@ -8,7 +8,7 @@ export const Experience = () => {
       company: 'Technopedia Software Pvt. Ltd.',
       logo: logo, // Using an existing image from the public folder as placeholder
       role: 'Software Developer',
-      period: 'Dec 2024 - Present',
+      period: 'Oct 2024 - Present',
       duration: '9 mos',
       location: 'Noida, Uttar Pradesh, India · On-site',
       type: 'Full-time',
@@ -22,23 +22,7 @@ export const Experience = () => {
       techStack: 'Flutter, Kotlin, Jetpack Compose, Firebase, REST API, Git',
       skills: 'Android, Android Design +9 skills'
     },
-    {
-      company: 'Technopedia Software Pvt. Ltd.',
-      logo: logo, // Using an existing image from the public folder as placeholder
-      role: 'Software Developer',
-      period: 'Oct 2024 - Dec 2024',
-      duration: '3 mos',
-      location: 'Noida, Uttar Pradesh, India · On-site',
-      type: 'Internship',
-      highlights: [
-        'Worked on Flutter development projects',
-        'Learned and applied Flutter SDK in real-world applications',
-        'Contributed to mobile app development lifecycle',
-        'Gained hands-on experience with Flutter framework'
-      ],
-      techStack: 'Flutter Development',
-      skills: 'Flutter SDK, Flutter +1 skill'
-    }
+    
   ];
 
   return (

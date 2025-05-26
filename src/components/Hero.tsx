@@ -1,7 +1,8 @@
 import React from 'react';
 import { Eye, Send, Smartphone, Download } from 'lucide-react';
 import profile from '../../public/photo.jpg';
-import Resume from '../../public/Pradeep Singh Remume New.pdf';
+import Resume from '../../public/Pradeep Singh Mobile App Developer.pdf';
+
 
 
 export const Hero = () => {
@@ -73,7 +74,7 @@ export const Hero = () => {
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" className="w-6 h-6" />
               </div>
             </div>
-            <span className="text-gray-600 animate-fade-in">5+ years of mobile development experience</span>
+            <span className="text-gray-600 animate-fade-in">1+ years of mobile development experience</span>
           </div>
         </div>
         
