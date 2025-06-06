@@ -1,5 +1,5 @@
-import React from 'react';
-import { Smartphone } from 'lucide-react';
+import React, { useState } from 'react';
+import { Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
 import one from '../../public/1.jpg';
 import Two from '../../public/2.jpg';
 import Three from '../../public/3.jpg';
@@ -20,6 +20,33 @@ import pharmapedia3 from '../../public/pharmapedia3.jpg';
 
 
 export const AppMockups = () => {
+  // State to track current slide for each app
+  const [currentSlides, setCurrentSlides] = useState<Record<number, number>>({});
+
+  // Function to navigate to next slide
+  const nextSlide = (appIndex: number, totalSlides: number) => {
+    setCurrentSlides(prev => ({
+      ...prev,
+      [appIndex]: ((prev[appIndex] || 0) + 1) % totalSlides
+    }));
+  };
+
+  // Function to navigate to previous slide
+  const prevSlide = (appIndex: number, totalSlides: number) => {
+    setCurrentSlides(prev => ({
+      ...prev,
+      [appIndex]: ((prev[appIndex] || 0) - 1 + totalSlides) % totalSlides
+    }));
+  };
+
+  // Function to directly navigate to a specific slide
+  const goToSlide = (appIndex: number, slideIndex: number) => {
+    setCurrentSlides(prev => ({
+      ...prev,
+      [appIndex]: slideIndex
+    }));
+  };
+
   const apps = [
     {
       name: 'Mobimist',
@@ -119,44 +146,94 @@ export const AppMockups = () => {
         <p className="text-gray-600 mb-12">A closer look at some of my featured applications</p>
 
         <div className="space-y-24">
-          {apps.map((app, index) => (
-            <div key={index} className="relative">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="md:w-1/2">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: app.color }}>{app.name}</h3>
-                  <div className="flex gap-4">
-                    {app.screens.map((screen, i) => (
-                      <div 
-                        key={i}
-                        className="relative w-[200px] transform transition-transform hover:scale-105"
-                      >
-                        <div className="w-full aspect-[9/19] bg-gray-900 rounded-[32px] p-2 shadow-xl">
-                          <img 
-                            src={screen}
-                            alt={`${app.name} screenshot ${i + 1}`}
-                            className="w-full h-full object-cover rounded-[24px]"
-                          />
+          {apps.map((app, index) => {
+            const currentSlide = currentSlides[index] || 0;
+            return (
+              <div key={index} className="relative">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="md:w-1/2">
+                    <h3 className="text-2xl font-bold mb-4" style={{ color: app.color }}>{app.name}</h3>
+                    
+                    {/* Desktop view - show all screens side by side */}
+                    <div className="hidden md:flex gap-4">
+                      {app.screens.map((screen, i) => (
+                        <div 
+                          key={i}
+                          className="relative w-[200px] transform transition-transform hover:scale-105"
+                        >
+                          <div className="w-full aspect-[9/19] bg-gray-900 rounded-[32px] p-2 shadow-xl">
+                            <img 
+                              src={screen}
+                              alt={`${app.name} screenshot ${i + 1}`}
+                              className="w-full h-full object-cover rounded-[24px]"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Mobile view - show slider */}
+                    <div className="md:hidden relative">
+                      <div className="flex justify-center">
+                        <div className="relative w-[250px] transform transition-transform hover:scale-105">
+                          <div className="w-full aspect-[9/19] bg-gray-900 rounded-[32px] p-2 shadow-xl">
+                            <img 
+                              src={app.screens[currentSlide]}
+                              alt={`${app.name} screenshot ${currentSlide + 1}`}
+                              className="w-full h-full object-cover rounded-[24px]"
+                            />
+                          </div>
+                          
+                          {/* Navigation buttons */}
+                          <button 
+                            onClick={() => prevSlide(index, app.screens.length)}
+                            className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-10"
+                            aria-label="Previous slide"
+                          >
+                            <ChevronLeft size={20} color={app.color} />
+                          </button>
+                          
+                          <button 
+                            onClick={() => nextSlide(index, app.screens.length)}
+                            className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-10"
+                            aria-label="Next slide"
+                          >
+                            <ChevronRight size={20} color={app.color} />
+                          </button>
                         </div>
                       </div>
-                    ))}
+                      
+                      {/* Slide indicators */}
+                      <div className="flex justify-center mt-4 gap-2">
+                        {app.screens.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={() => goToSlide(index, i)}
+                            className={`w-2 h-2 rounded-full transition-all ${currentSlide === i ? 'w-4 bg-' + app.color.replace('#', '') : 'bg-gray-300'}`}
+                            style={{ backgroundColor: currentSlide === i ? app.color : undefined }}
+                            aria-label={`Go to slide ${i + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="md:w-1/2">
-                  <div className="bg-white rounded-xl shadow-md p-6">
-                    <h4 className="text-xl font-semibold mb-4">Key Features</h4>
-                    <ul className="space-y-3">
-                      {app.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: app.color }}></div>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="md:w-1/2">
+                    <div className="bg-white rounded-xl shadow-md p-6">
+                      <h4 className="text-xl font-semibold mb-4">Key Features</h4>
+                      <ul className="space-y-3">
+                        {app.features.map((feature, i) => (
+                          <li key={i} className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: app.color }}></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
