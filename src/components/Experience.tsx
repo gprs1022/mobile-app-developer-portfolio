@@ -1,9 +1,28 @@
 import React from 'react';
 import { Briefcase, Calendar, Wrench, Building2 } from 'lucide-react';
-import logo from '../../public/logo.png'; // Importing the image from the public folder
+import logo from '../../public/logo.png';
+import logo2 from '../../public/logo2.jpeg'; // Importing the image from the public folder
 
 export const Experience = () => {
   const experiences = [
+     {
+      company: 'Nethues Software Pvt. Ltd.',
+      logo: logo2, // Using an existing image from the public folder as placeholder
+      role: 'Software Engineer',
+      period: 'Jul 2025 - Present',
+      duration: 'Present',
+      location: 'Rohni, Delhi  · On-site',
+      type: 'Full-time',
+      highlights: [
+        'Developed 3+ cross-platform mobile apps using Flutter with GetX state management.',
+        'Integrated Firebase Auth, Firestore, and custom Node.js APIs using Dio.',
+        'Used Jetpack Compose for native Android modules with MVVM structure.',
+        'Collaborated with UI/UX designers and backend team to deliver end-to-end features.',
+        'Published 2 apps to Google Play Store.'
+      ],
+      techStack: 'Flutter, Kotlin, Jetpack Compose, Firebase, REST API, Git',
+      skills: 'Android, Android Design +9 skills'
+    },
     {
       company: 'Technopedia Software Pvt. Ltd.',
       logo: logo, // Using an existing image from the public folder as placeholder
