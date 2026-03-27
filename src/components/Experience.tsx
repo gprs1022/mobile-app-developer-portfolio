@@ -27,8 +27,8 @@ export const Experience = () => {
       company: 'Technopedia Software Pvt. Ltd.',
       logo: logo, // Using an existing image from the public folder as placeholder
       role: 'Software Developer',
-      period: 'Dec 2024 - Jun 2025',
-      duration: '6 months',
+      period: 'Oct 2024 - Jun 2025',
+      duration: '',
       location: 'Noida, Uttar Pradesh, India · On-site',
       type: 'Full-time',
       highlights: [
