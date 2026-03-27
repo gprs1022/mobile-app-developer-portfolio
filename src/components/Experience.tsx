@@ -5,7 +5,7 @@ import logo2 from '../../public/logo2.jpeg'; // Importing the image from the pub
 
 export const Experience = () => {
   const experiences = [
-     {
+    {
       company: 'Nethues Software Pvt. Ltd.',
       logo: logo2, // Using an existing image from the public folder as placeholder
       role: 'Software Engineer',
@@ -14,34 +14,33 @@ export const Experience = () => {
       location: 'Rohni, Delhi  · On-site',
       type: 'Full-time',
       highlights: [
-        'Developed 3+ cross-platform mobile apps using Flutter with GetX state management.',
+        'Developed  and maintained 4 + cross-platform mobile apps using Flutter with Provider, river pod, etc',
+        'Maintained and updated existing mobile applications.',
         'Integrated Firebase Auth, Firestore, and custom Node.js APIs using Dio.',
-        'Used Jetpack Compose for native Android modules with MVVM structure.',
         'Collaborated with UI/UX designers and backend team to deliver end-to-end features.',
-        'Published 2 apps to Google Play Store.'
+        'Published 3 apps to Google Play Store in this organization.'
       ],
-      techStack: 'Flutter, Kotlin, Jetpack Compose, Firebase, REST API, Git',
-      skills: 'Android, Android Design +9 skills'
+      techStack: 'Flutter, Dart, Firebase, REST API, Git',
+      skills: 'Flutter, Dart Design +9 skills'
     },
     {
       company: 'Technopedia Software Pvt. Ltd.',
       logo: logo, // Using an existing image from the public folder as placeholder
       role: 'Software Developer',
-      period: 'Oct 2024 - Present',
-      duration: '9 mos',
+      period: 'Dec 2024 - Jun 2025',
+      duration: '6 months',
       location: 'Noida, Uttar Pradesh, India · On-site',
       type: 'Full-time',
       highlights: [
         'Developed 3+ cross-platform mobile apps using Flutter with GetX state management.',
         'Integrated Firebase Auth, Firestore, and custom Node.js APIs using Dio.',
-        'Used Jetpack Compose for native Android modules with MVVM structure.',
         'Collaborated with UI/UX designers and backend team to deliver end-to-end features.',
         'Published 2 apps to Google Play Store.'
       ],
-      techStack: 'Flutter, Kotlin, Jetpack Compose, Firebase, REST API, Git',
-      skills: 'Android, Android Design +9 skills'
+      techStack: 'Flutter, Dart, Firebase, REST API, Git',
+      skills: 'Flutter, Dart Design +9 skills'
     },
-    
+
   ];
 
   return (
@@ -61,7 +60,7 @@ export const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:scale-[1.02] glass-morphism"
             >
@@ -70,9 +69,9 @@ export const Experience = () => {
                   <div className="flex items-start gap-4">
                     {exp.logo ? (
                       <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md flex-shrink-0 border border-gray-100">
-                        <img 
-                          src={exp.logo} 
-                          alt={`${exp.company} logo`} 
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -96,13 +95,13 @@ export const Experience = () => {
                     <div className="text-gray-500 text-sm mt-2">{exp.duration}</div>
                   </div>
                 </div>
-                
+
                 <div className="mb-4 mt-6">
                   <h4 className="text-md font-semibold text-gray-700 mb-2">Key Contributions:</h4>
                   <ul className="space-y-3 text-gray-700">
                     {exp.highlights.map((highlight, i) => (
-                      <li 
-                        key={i} 
+                      <li
+                        key={i}
                         className="flex items-start gap-3 group hover:transform hover:translate-x-2 transition-transform"
                       >
                         <div className="w-2 h-2 mt-2 rounded-full bg-gradient-to-r from-[#3DDC84] to-[#02569B] group-hover:scale-150 transition-transform"></div>
@@ -111,7 +110,7 @@ export const Experience = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 pt-4 border-t border-gray-100">
                   <div className="flex items-center gap-2">
                     <Wrench size={16} className="text-[#02569B]" />

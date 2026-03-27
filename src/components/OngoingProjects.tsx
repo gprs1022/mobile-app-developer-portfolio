@@ -8,7 +8,7 @@ export const OngoingProjects = () => {
     if (scrollRef.current) {
       const { current } = scrollRef;
       const scrollAmount = 320; // Approximate card width + gap
-      
+
       if (direction === 'left') {
         current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       } else {
@@ -53,7 +53,7 @@ export const OngoingProjects = () => {
       case 'android':
         return (
           <div className="w-8 h-8 rounded-full bg-[#3DDC84]/10 flex items-center justify-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1031px-Android_logo_2019_%28stacked%29.svg.png?20210331145341" alt="Android" className="w-5 h-5" />
+            <img src="https://api.iconify.design/mdi:android.svg?color=%233DDC84" alt="Android" className="w-5 h-5" />
           </div>
         );
       case 'ios':
@@ -83,14 +83,14 @@ export const OngoingProjects = () => {
         <p className="text-gray-600 mb-6">Projects currently in development or planning stages</p>
 
         <div className="flex items-center justify-end gap-2 mb-6">
-          <button 
+          <button
             onClick={() => scroll('left')}
             className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
             aria-label="Scroll left"
           >
             <ArrowLeft size={20} />
           </button>
-          <button 
+          <button
             onClick={() => scroll('right')}
             className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
             aria-label="Scroll right"
@@ -99,13 +99,13 @@ export const OngoingProjects = () => {
           </button>
         </div>
 
-        <div 
+        <div
           ref={scrollRef}
           className="flex overflow-x-auto scrollbar-hide gap-6 pb-4"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="flex-shrink-0 w-[300px] bg-white rounded-xl shadow-md overflow-hidden"
             >

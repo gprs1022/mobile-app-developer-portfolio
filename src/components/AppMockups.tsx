@@ -15,6 +15,12 @@ import career3 from '../../public/career3.jpg';
 import pharmapedia1 from '../../public/pharmapedia1.jpg';
 import pharmapedia2 from '../../public/pharmapedia2.jpg';
 import pharmapedia3 from '../../public/pharmapedia3.jpg';
+import bmd1 from '../../public/bmd1.webp';
+import bmd2 from '../../public/bmd2.webp';
+import bmd3 from '../../public/bmd3.webp';
+import recipe1 from '../../public/recipe1.webp';
+import recipe2 from '../../public/recipe2.webp';
+import recipe3 from '../../public/recipe3.webp';
 
 
 
@@ -63,6 +69,39 @@ export const AppMockups = () => {
         'Dynamic Product Listings: Display models and services dynamically based on brand and category selection',
         'Order Management: Track order history, repair status, and service invoices',
         'Admin Panel (Web): Manage users, products, services, and orders from a separate web dashboard'
+      ]
+    },
+    {
+      name: 'Bring My Drink',
+      color: '#E58918',
+      screens: [
+        bmd1,
+        bmd2,
+        bmd3
+      ],
+      features: [
+        'Users can place drink orders and track live status updates such as Received, Preparing, and Delivered with dynamic UI updates.',
+        'OTP-based login system with secure token management for safe and seamless user sessions.',
+        'Dynamic menu listings that update in real-time based on availability and user preferences.',
+        'Order history and tracking features that allow users to view past orders and current order status.',
+        'View order history, track current orders, and monitor status changes integrated with backend APIs.',
+      ]
+    },
+    {
+      name: 'Recipe',
+      color: '#161617',
+      screens: [
+        recipe1,
+        recipe2,
+        recipe3
+      ],
+      features: [
+        'Browse and explore a wide range of recipes with detailed ingredients, preparation steps, and cooking time',
+        'View recipes dynamically based on categories such as breakfast, lunch, dinner, snacks, and desserts',
+        'Easily search recipes and save favorite items for quick access later',
+        'OTP-based login and registration with secure local storage for user sessions',
+        'Admin panel (web) for managing recipes, categories, and user accounts with role-based access control',
+        'Responsive design ensuring a seamless experience across mobile and web platforms'
       ]
     },
     {
@@ -123,7 +162,7 @@ export const AppMockups = () => {
         pharmapedia1,
         pharmapedia2,
         pharmapedia3
-        
+
       ],
       features: [
         'Medication Database: Comprehensive information on thousands of medications with usage guidelines',
@@ -153,16 +192,16 @@ export const AppMockups = () => {
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="md:w-1/2">
                     <h3 className="text-2xl font-bold mb-4" style={{ color: app.color }}>{app.name}</h3>
-                    
+
                     {/* Desktop view - show all screens side by side */}
                     <div className="hidden md:flex gap-4">
                       {app.screens.map((screen, i) => (
-                        <div 
+                        <div
                           key={i}
                           className="relative w-[200px] transform transition-transform hover:scale-105"
                         >
                           <div className="w-full aspect-[9/19] bg-gray-900 rounded-[32px] p-2 shadow-xl">
-                            <img 
+                            <img
                               src={screen}
                               alt={`${app.name} screenshot ${i + 1}`}
                               className="w-full h-full object-cover rounded-[24px]"
@@ -171,29 +210,29 @@ export const AppMockups = () => {
                         </div>
                       ))}
                     </div>
-                    
+
                     {/* Mobile view - show slider */}
                     <div className="md:hidden relative">
                       <div className="flex justify-center">
                         <div className="relative w-[250px] transform transition-transform hover:scale-105">
                           <div className="w-full aspect-[9/19] bg-gray-900 rounded-[32px] p-2 shadow-xl">
-                            <img 
+                            <img
                               src={app.screens[currentSlide]}
                               alt={`${app.name} screenshot ${currentSlide + 1}`}
                               className="w-full h-full object-cover rounded-[24px]"
                             />
                           </div>
-                          
+
                           {/* Navigation buttons */}
-                          <button 
+                          <button
                             onClick={() => prevSlide(index, app.screens.length)}
                             className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-10"
                             aria-label="Previous slide"
                           >
                             <ChevronLeft size={20} color={app.color} />
                           </button>
-                          
-                          <button 
+
+                          <button
                             onClick={() => nextSlide(index, app.screens.length)}
                             className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full shadow-md z-10"
                             aria-label="Next slide"
@@ -202,7 +241,7 @@ export const AppMockups = () => {
                           </button>
                         </div>
                       </div>
-                      
+
                       {/* Slide indicators */}
                       <div className="flex justify-center mt-4 gap-2">
                         {app.screens.map((_, i) => (

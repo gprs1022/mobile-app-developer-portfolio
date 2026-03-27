@@ -22,7 +22,7 @@ function App() {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -50,13 +50,12 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      
+
       {/* Scroll to top button */}
-      <button 
+      <button
         onClick={scrollToTop}
-        className={`fixed right-6 bottom-6 p-3 rounded-full bg-gradient-to-r from-[#3DDC84] to-[#02569B] text-white shadow-lg z-50 transition-all duration-300 ${
-          showScrollTop ? 'opacity-100 translate-y-0 scroll-top-button' : 'opacity-0 translate-y-10 pointer-events-none'
-        } hover:scale-110 glass-morphism`}
+        className={`fixed right-6 bottom-6 p-3 rounded-full bg-gradient-to-r from-[#3DDC84] to-[#02569B] text-white shadow-lg z-50 transition-all duration-300 ${showScrollTop ? 'opacity-100 translate-y-0 scroll-top-button' : 'opacity-0 translate-y-10 pointer-events-none'
+          } hover:scale-110 glass-morphism`}
         aria-label="Scroll to top"
       >
         <ArrowUp size={24} />
@@ -70,12 +69,12 @@ const About = () => {
     <section id="about" className="py-16 px-4 max-w-6xl mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/3">
-          <img 
-            src={profile} 
-            alt="Pradeep Singh" 
+          <img
+            src={profile}
+            alt="Pradeep Singh"
             className="rounded-lg shadow-md w-full max-w-sm mx-auto object-cover aspect-square"
           />
-          
+
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4 mt-6">
             <a href="https://github.com/gprs1022" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-gray-100 hover:bg-[#3DDC84] hover:text-white transition-all transform hover:scale-110">
@@ -95,16 +94,16 @@ const About = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="md:w-2/3">
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <div className="space-y-4">
             <p className="text-lg font-medium bg-gradient-to-r from-[#3DDC84] to-[#02569B] bg-clip-text text-transparent">
-              Hi! My name is Pradeep Singh I'm a
+              Hi, My name is Pradeep Singh I'm a
             </p>
             <div className="space-y-2">
               <p className="text-lg flex items-center gap-2 hover:translate-x-2 transition-transform">
-                👨‍💻 <span className="font-medium">Mobile App Developer</span> at <span className="text-[#3DDC84]">Technopedia Software Pvt. Ltd.</span> (1 year)
+                👨‍💻 <span className="font-medium">Mobile App Developer</span> at <span className="text-[#3DDC84]">Nethues Technologies Pvt. Ltd.</span> (1.5 years)
               </p>
               <p className="text-lg flex items-center gap-2 hover:translate-x-2 transition-transform">
                 ⭐ <span className="font-medium">RedHat Student Brand Ambassador</span>
@@ -123,7 +122,7 @@ const About = () => {
             </p>
             <p className="text-lg hover:scale-[1.02] transition-transform">
               Instead of making a online Concepts of Apps, i started enjoying
-              Mobile App development at <span className="text-[#3DDC84] font-medium">Technopedia Software</span>. Creating custom things for Apps
+              Mobile App development at <span className="text-[#3DDC84] font-medium">Nethues Technologies Pvt. Ltd.</span>. Creating custom things for Apps
               taught me a lot about design & development!
             </p>
             <p className="text-lg hover:scale-[1.02] transition-transform">
@@ -131,7 +130,7 @@ const About = () => {
               Mobile App designs, I like to code things from scratch, and enjoy
               bringing ideas to life in the browser.
             </p>
-            
+
             {/* Contact Links */}
             <div className="flex flex-wrap gap-4 mt-6">
               <a href="mailto:pradeep1022@gmail.com" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-[#3DDC84] hover:text-white transition-all">

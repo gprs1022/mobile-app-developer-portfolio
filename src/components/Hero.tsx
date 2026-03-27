@@ -1,7 +1,7 @@
 import React from 'react';
 import { Eye, Send, Smartphone, Download } from 'lucide-react';
 import profile from '../../public/photo.jpg';
-import Resume from '../../public/Pradeep Singh Mobile App Developer.pdf';
+import Resume from '../../public/Pradeep Singh Mobile app Developer-2026.pdf';
 
 
 
@@ -22,38 +22,38 @@ export const Hero = () => {
         <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-b from-[#3DDC84]/10 to-transparent rounded-full transform rotate-12 animate-float"></div>
         <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-t from-[#02569B]/10 to-transparent rounded-full transform -rotate-12 animate-float-delayed"></div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10">
         <div className="md:w-1/2">
           <div className="inline-block px-3 py-1 bg-[#3DDC84]/10 text-[#3DDC84] rounded-full text-sm font-medium mb-6 hover:scale-110 transition-transform">
             &lt;/&gt; Mobile App Developer
           </div>
-          
+
           <h1 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
             Hi, I'm <span className="text-[#3DDC84]">Pradeep</span> <span className="text-black">Singh</span>
           </h1>
-          
+
           <p className="text-lg mb-8 text-gray-700 leading-relaxed animate-fade-in">
             I create beautiful, functional mobile experiences for Android and iOS using native technologies and Flutter. Let's build something amazing together!
           </p>
-          
+
           <div className="flex flex-wrap gap-4 mb-8">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#3DDC84] to-[#02569B] text-white rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 transform"
             >
               <Eye size={18} className="animate-pulse" />
               View My Work
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="flex items-center gap-2 px-6 py-3 bg-white text-gray-800 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-all hover:scale-105 transform glass-morphism"
             >
               <Send size={18} className="animate-bounce" />
               Contact Me
             </a>
-            <a 
-              href={Resume} 
+            <a
+              href={Resume}
               download="Pradeep Singh Resume.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 transform"
             >
@@ -61,11 +61,11 @@ export const Hero = () => {
               Download Resume
             </a>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2">
               <div className="w-10 h-10 rounded-full bg-[#3DDC84]/10 flex items-center justify-center hover:scale-110 transition-transform z-30">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1031px-Android_logo_2019_%28stacked%29.svg.png?20210331145341" alt="Android" className="w-6 h-6" />
+                <img src="https://api.iconify.design/mdi:android.svg?color=%233DDC84" alt="Android" className="w-6 h-6" />
               </div>
               <div className="w-10 h-10 rounded-full bg-black/10 flex items-center justify-center hover:scale-110 transition-transform z-20">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg" alt="iOS" className="w-6 h-6" />
@@ -74,10 +74,10 @@ export const Hero = () => {
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" className="w-6 h-6" />
               </div>
             </div>
-            <span className="text-gray-600 animate-fade-in">1+ years of mobile development experience</span>
+            <span className="text-gray-600 animate-fade-in">1.5+ years of mobile development experience</span>
           </div>
         </div>
-        
+
         <div className="md:w-1/2 relative">
           <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-0 rotate-6">
             <div className="w-[280px] h-[580px] bg-gradient-to-br from-gray-900 to-black rounded-[40px] p-3 shadow-2xl mx-auto glass-morphism relative border-[8px] border-black">
@@ -87,7 +87,7 @@ export const Hero = () => {
                 <div className="w-6 h-1 bg-gray-800 rounded-full"></div>
               </div>
               <div className="absolute top-1.5 right-5 w-1.5 h-1.5 rounded-full bg-white z-20"></div>
-              
+
               <div className="w-full h-full bg-gradient-to-br from-[#3DDC84] to-[#02569B] rounded-[32px] overflow-hidden relative">
                 {/* Status bar */}
                 <div className="absolute top-0 left-0 right-0 h-7 z-20 flex items-center justify-between px-5 text-white/90 text-xs">
@@ -111,7 +111,7 @@ export const Hero = () => {
                     <div className="bg-white/90 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all">
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3DDC84] to-[#02569B] p-[2px] ring-2 ring-white/20">
-                          <img src={profile} alt="Pradeep Singh" className="w-full h-full rounded-full object-cover"/>
+                          <img src={profile} alt="Pradeep Singh" className="w-full h-full rounded-full object-cover" />
                         </div>
                         <div>
                           <h3 className="font-bold gradient-text">Pradeep Singh</h3>
@@ -134,7 +134,7 @@ export const Hero = () => {
                           <span className="text-sm text-gray-600">95%</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1031px-Android_logo_2019_%28stacked%29.svg.png?20210331145341" alt="Android" className="w-5 h-5" />
+                          <img src="https://api.iconify.design/mdi:android.svg?color=%233DDC84" alt="Android" className="w-5 h-5" />
                           <div className="flex-1">
                             <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                               <div className="h-full bg-[#3DDC84] rounded-full" style={{ width: '90%' }}></div>
@@ -184,10 +184,10 @@ export const Hero = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Floating elements with enhanced animations */}
             <div className="absolute -top-4 -left-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center animate-float hover:scale-110 transition-transform glass-morphism">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1031px-Android_logo_2019_%28stacked%29.svg.png?20210331145341" alt="Android" className="w-8 h-8" />
+              <img src="https://api.iconify.design/mdi:android.svg?color=%233DDC84" alt="Android" className="w-8 h-8" />
             </div>
             <div className="absolute top-1/2 -right-4 w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center animate-float-delayed hover:scale-110 transition-transform glass-morphism">
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg" alt="iOS" className="w-8 h-8" />
