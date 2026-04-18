@@ -11,7 +11,7 @@ import { Achievements } from './components/Achievements';
 import { AppMockups } from './components/AppMockups';
 import { AppDevSeries } from './components/AppDevSeries';
 import { ArrowUp } from 'lucide-react';
-import profile from '../public/photo.jpg';
+import profile from '../public/photo.jpeg';
 import { Github, Linkedin, Twitter, Instagram, Youtube, Mail, Globe } from 'lucide-react';
 
 

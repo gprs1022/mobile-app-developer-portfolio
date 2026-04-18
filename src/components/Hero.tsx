@@ -1,6 +1,6 @@
 import React from 'react';
 import { Eye, Send, Smartphone, Download } from 'lucide-react';
-import profile from '../../public/photo.jpg';
+import profile from '../../public/photo.jpeg';
 import Resume from '../../public/Pradeep Singh Mobile app Developer-2026.pdf';
 
 

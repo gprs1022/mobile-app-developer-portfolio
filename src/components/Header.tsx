@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Home, User, Code, Briefcase, Award, Mail, CodeSquare } from 'lucide-react';
-import profile from '../../public/photo.jpg';
+import profile from '../../public/photo.jpeg';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
